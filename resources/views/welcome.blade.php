@@ -23,7 +23,9 @@
                 @endforeach
                 <a class="list-group-item list-group-item-action">
                     <span class="index">{{ $index + 2 }}</span>
-                    <span class="title">Comming soon</span>
+                    <span class="title">Form management</span>
+
+                    <small>Coming soon</small>
                 </a>
             </div>
         </div>
