@@ -1,0 +1,22 @@
+* {
+  font-family: "Nunito";
+  color: #34495e;
+}
+
+.cv-img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+p {
+  font-size: 20px;
+}
+
