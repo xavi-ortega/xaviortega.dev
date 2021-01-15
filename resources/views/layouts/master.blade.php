@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    @yield('page-meta')
+
+    <link rel="canonical" href="https://xaviortega.dev" />
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <title>@yield('title')</title>
@@ -62,8 +65,8 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://github.com/xavi-ortega" title="Github"><img class="img-fluid" src="/images/github.svg" alt="xavi-ortega"></a></li>
-                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/xavi-ortega/" title="Linkedin"><img class="img-fluid" src="/images/linkedin.svg" alt="xavi-ortega"></a></li>
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://github.com/xavi-ortega" title="Github" rel="noreferrer"><img class="img-fluid" src="/images/github.svg" alt="xavi-ortega"></a></li>
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/xavi-ortega/" title="Linkedin" rel="noreferrer"><img class="img-fluid" src="/images/linkedin.svg" alt="xavi-ortega"></a></li>
                 </ul>
 
                 <ul class="navbar-nav mx-auto">

@@ -2,6 +2,10 @@
 
 @section('title', 'xaviortega.dev • Always learning')
 
+@section('page-meta')
+<meta name="description" content="I love programming and I improve my skills everyday. Welcome to my personal blog, where I will share everything I think its worth">
+@endsection
+
 @section('page-styles')
 <link rel="stylesheet" href="/css/welcome.css">
 @endsection
@@ -21,12 +25,12 @@
                     <small><i class="fas fa-clock"></i> {{ $article->read_time }}min read</small>
                 </a>
                 @endforeach
-                <a class="list-group-item list-group-item-action">
+                <div class="list-group-item list-group-item-action">
                     <span class="index">{{ $index + 2 }}</span>
-                    <span class="title">Form management</span>
+                    <span class="title">Custom Form Control</span>
 
                     <small>Coming soon</small>
-                </a>
+                </div>
             </div>
         </div>
     </div>
