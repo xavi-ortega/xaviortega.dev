@@ -12,27 +12,43 @@
 
 @section('body')
 <section>
-    <div class="series">
-        <h1 class="text-center">Ionic and Angular features <br>for App Development</h1>
+    <div class="banner mb-5">
 
-        <div class="articles">
-            <div class="list-group">
-                @foreach($articles as $index => $article)
-                <a class="list-group-item list-group-item-action mb-3" href="/article/{{ $article->slug }}">
-                    <span class="index">{{ $index + 1 }}</span>
-                    <span class="title">{{ $article->shortTitle }}</span>
+        <div class="text">
+            <h1 class="text-center mb-5">Ionic and Angular features <br>for App Development</h1>
 
-                    <small><i class="fas fa-clock"></i> {{ $article->read_time }}min read</small>
-                </a>
-                @endforeach
-                <div class="list-group-item list-group-item-action">
-                    <span class="index">{{ $index + 2 }}</span>
-                    <span class="title">Custom Form Control</span>
+            <p class="text-center">In this series you will learn how to take profit of all Angular features that makes app development easier.</p>
+        </div>
 
-                    <small>Coming soon</small>
-                </div>
+    </div>
+
+    <div class="articles">
+
+        @foreach($articles as $index => $article)
+        <a href="/article/{{ $article->slug }}">
+            <div class="index">
+                <span>{{ $index + 1 }}</span>
+                <small><i class="fas fa-clock"></i> {{ $article->read_time }}min read</small>
+            </div>
+            <div class="info">
+                <h3>{{ $article->shortTitle }}</h3>
+                <p>{{ $article->description }}</p>
+            </div>
+
+
+        </a>
+        @endforeach
+        <div class="coming-soon">
+            <div class="index">
+                <span>{{ $index + 2 }}</span>
+                <small><i class="fas fa-clock"></i> Coming soon</small>
+            </div>
+            <div class="info">
+                <h3>Custom Form Control</h3>
+                <p></p>
             </div>
         </div>
+
     </div>
 </section>
 @endsection

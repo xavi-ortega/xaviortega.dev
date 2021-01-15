@@ -7,50 +7,128 @@ section {
   padding: 2rem 0;
 }
 
-.series {
-  padding: 2rem 1rem;
-  background: linear-gradient(270deg, #3498db, #3c519a);
+.banner {
+  position: relative;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #5b79a2 0%, #2e4469 100%);
   border-radius: 10px;
 }
 
-.series .articles {
-  margin: 4rem 15rem 0 15rem;
+.banner h1 {
+  font-size: 38px;
 }
 
-.series .articles a,
-.series .articles div {
+.banner .text {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner .text p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: url(/images/programming.jpg) no-repeat left;
+  background-size: 100%;
+  mix-blend-mode: luminosity;
+  opacity: 0.25;
+  filter: blur(3px);
+}
+
+.articles {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-row-gap: 1rem;
+  row-gap: 1rem;
+  grid-column-gap: 0.5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+}
+
+.articles a,
+.articles .coming-soon {
+  width: 400px;
+  box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;
   border-radius: 10px;
-  font-size: 26px;
-  line-height: 36px;
-  font-weight: 600;
-  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.articles a:hover,
+.articles .coming-soon:hover {
+  background-color: #d3e9ff;
+}
+
+.articles a .index,
+.articles .coming-soon .index {
+  height: 100%;
+  background: linear-gradient(180deg, #3188ef, #205fc7);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px 4px 9px 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles a .index span,
+.articles .coming-soon .index span {
+  color: white;
+  padding: 1.5rem;
+  flex: 1;
+  font-size: 40px;
   display: flex;
   align-items: center;
 }
 
-.series .articles a .index,
-.series .articles div .index {
-  font-size: 40px;
-  border-right: 1px solid #3498db;
-  padding: 1.5rem;
+.articles a .index small,
+.articles .coming-soon .index small {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  padding: 0.5rem;
+  white-space: nowrap;
+  background: #007bff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  min-width: 120px;
 }
 
-.series .articles a .title,
-.series .articles div .title {
+.articles a .index small i,
+.articles .coming-soon .index small i {
+  color: white;
+}
+
+.articles a .info,
+.articles .coming-soon .info {
   margin: 1.5rem;
 }
 
-.series .articles a small,
-.series .articles div small {
-  color: #bdc3c7;
-  font-size: 14px;
-  margin-left: auto;
-  padding-right: 1.5rem;
+.articles a .info h3,
+.articles .coming-soon .info h3 {
+  font-size: 16px;
+  line-height: 36px;
+  font-weight: 600;
 }
 
-.series .articles a small i,
-.series .articles div small i {
-  color: #bdc3c7;
+.articles a .info p,
+.articles .coming-soon .info p {
+  font-size: 12px;
 }
 
 h1 {

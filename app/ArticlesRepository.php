@@ -55,6 +55,10 @@ class ArticlesRepository
 
             $article->content = $content;
 
+            $introduction = explode('Introduction', strip_tags($content))[1];
+
+            $article->description = mb_substr($introduction, 0, 150) . '...';
+
             return $article;
         }
 
@@ -68,6 +72,20 @@ class ArticlesRepository
      */
     public function getAvailableArticles(): Collection
     {
-        return Article::all();
+        return Article::all()->map(function ($article) {
+            $path = base_path('resources/articles/' . $article->slug . '.md');
+
+            if ($this->files->exists($path)) {
+                $content = (new Parsedown)->text($this->files->get($path));
+
+                $article->content = $content;
+
+                $introduction = explode('Introduction', strip_tags($content))[1];
+
+                $article->description = mb_substr($introduction, 0, 150) . '...';
+
+                return $article;
+            }
+        });
     }
 }

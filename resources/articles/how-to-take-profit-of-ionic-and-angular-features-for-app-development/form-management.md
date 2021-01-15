@@ -2,14 +2,15 @@
 
 # Introduction
 
-Angular nos permite utilizar Reactive Forms para trabajar con los formularios de manera reactiva convirtiéndolos en objetos. El objetivo de este artículo es mostrar las herramientas útiles que nos proporciona el framework para gestionar los formularios.
-Para mostrar un ejemplo de la vida real se realizará un formulario de login y uno de registro.
+Angular allows us to use Reactive Forms to work with forms in a reactive way by converting them into objects. The aim of this article is to show the useful tools provided by the framework for managing forms.
+
+To show a real-life example, a login form and a registration form will be created.
 
 # Declaration
 
-Para declarar un formulario con Reactive Forms, necesitamos hacerlo desde el archivo de typescript de la página. Empezaremos por la página de login.
+To declare a form with Reactive Forms, we need to do so from the typescript file on the page. We will start with the login page.
 
-En la declaración del formulario, indicaremos cuales son los form controls que contiene y en cada uno le asignaremos un valor inicial, y unos validadores para poner reglas al formulario.
+In the declaration of the form, we will indicate which are the form controls contained. In each one we will assign an initial value as well as some validators to set some rules to the form.
 
 ```js
 import { Component, OnInit } from "@angular/core";
@@ -34,11 +35,11 @@ export class LoginPage implements OnInit {
 }
 ```
 
-> Para que el directive de Reactive Forms funcione, hay que importar ReactiveFormsModule en la propiedad imports dentro del module de la página.
-
 # Implementation
 
-Después de declararlo, tenemos que añadir el directive [formGroup] en el archivo HTML y dar referencia a los form controls que se han declarado.
+After declaring it, we have to add the directive [formGroup] in the HTML file and reference the form controls that have been declared.
+
+> For the Reactive Forms directive to work, you must import ReactiveFormsModule into the imports property within the page module.
 
 ```html
 <form [formGroup]="loginForm">
@@ -56,7 +57,7 @@ Después de declararlo, tenemos que añadir el directive [formGroup] en el archi
 </form>
 ```
 
-Para que sea más fácil trabajar con los form controls a nivel individual para validar los errores y mostrar feedback, crearemos un getter para cada uno.
+To make it easier to work with the form controls individually in order to validate errors and display feedback, we will create a getter for each one.
 
 ```js
 get email() {
@@ -68,7 +69,7 @@ get password() {
 }
 ```
 
-Luego, pondremos condicionales en el archivo HTML para mostrar feedback en caso de que se de un error.
+Afterwards, we will put conditionals in the HTML file to show feedback in case of an error.
 
 ```html
 <form [formGroup]="loginForm">
@@ -91,13 +92,13 @@ Luego, pondremos condicionales en el archivo HTML para mostrar feedback en caso 
 </form>
 ```
 
-Finalmente vamos a gestionar el submit del formulario y cómo enviamos sus datos. Para eso recorreremos al evento de Angular (ngSubmit) que detecta cuando se quiere enviar un formulario, ya sea con la tecla enter, o por pulsar el botón de submit.
+Finally, we will arrange the submission of the form and how we send its data. To do this we will go to the Angular event (ngSubmit) that detects when someone wants to submit a form, either with the enter key or by pressing the submit button.
 
 ```html
 <form [formGroup]="loginForm" (ngSubmit)="submit()"></form>
 ```
 
-También crearemos un método submit para realizar la comprobación de que el formulario pase las validaciones y así pueda enviar sus datos.
+We will also create a submit method to check that the form passes the validations in order for the data to be sent.
 
 ```js
 submit() {
@@ -117,13 +118,13 @@ submit() {
 }
 ```
 
-Y así hemos terminado la página de login!
+That way the login pages is finished!
 
-Para hacer la página de register, tendremos que seguir los mismos pasos que en la página de login.
+To make the register page, we will have to follow the same steps as in the login page.
 
-En este caso nos encontramos con una regla extra, que exige que la contraseña y la confirmación de contraseña deben coincidir. Esta regla pide que se debe realizar una validación entre dos campos, así que no se puede aplicar un validador a nivel de form control, si no que se debe aplicar un validador a nivel de Form Group.
+In this case we have an extra rule, which requires the password and the password confirmation to match. This rule demands a validation between the two fields. Hence, a validator cannot be applied at form control level, but at form group level.
 
-En primer lugar, se crea un método para usarlo como validador.
+Firstly, a method is created to use as a validator.
 
 ```js
 passwordsMustMatchValidator(): ValidatorFn {
@@ -140,7 +141,7 @@ passwordsMustMatchValidator(): ValidatorFn {
 }
 ```
 
-Este método se tiene que añadir como validador global de form group.
+This method has to be added as a global form group validator.
 
 ```js
 ngOnInit() {
@@ -158,7 +159,7 @@ ngOnInit() {
   }
 ```
 
-Y finalmente se añade el feedback al HTML
+Lastly, feedback is added to the HTML
 
 ```html
 <form [formGroup]="registerForm" (ngSubmit)="submit()">
@@ -216,6 +217,6 @@ Y finalmente se añade el feedback al HTML
 </form>
 ```
 
-Así es como se gestionan los formularios en Angular gracias a la increible herramienta Reactive Forms!
+This is how forms are managed in Angular thanks to the incredible Reactive Forms tool!
 
-En el próximo artículo hablaré sobre como crear un form control personalizado para poder utilizarlo junto con Reactive Forms.
+In the next article I will discuss how to create a customized form control to be used in conjunction with Reactive Forms.

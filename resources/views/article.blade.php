@@ -2,6 +2,10 @@
 
 @section('title', $article->title)
 
+@section('page-meta')
+<meta name="description" content="{{ $article->description }}">
+@endsection
+
 @section('page-styles')
 <link rel="stylesheet" href="/css/article.css">
 @endsection

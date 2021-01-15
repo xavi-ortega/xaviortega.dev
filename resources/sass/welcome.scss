@@ -7,44 +7,134 @@ section {
     padding: 2rem 0;
 }
 
-.series {
-    padding: 2rem 1rem;
-    background: linear-gradient(270deg, #3498db, #3c519a);
+.banner {
+    position: relative;
+    padding: 3rem 1rem;
+    background: linear-gradient(
+        to right,
+        rgb(91, 121, 162) 0%,
+        rgb(46, 68, 105) 100%
+    );
     border-radius: 10px;
 
-    .articles {
-        margin: 4rem 15rem 0 15rem;
+    h1 {
+        font-size: 38px;
+    }
 
-        a,
-        div {
+    .text {
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        p {
+            color: hsla(0, 0%, 100%, 0.75);
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: url(/images/programming.jpg) no-repeat left;
+        background-size: 100%;
+        mix-blend-mode: luminosity;
+        opacity: 0.25;
+        filter: blur(3px);
+    }
+}
+
+.articles {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    grid-row-gap: 1rem;
+    row-gap: 1rem;
+
+    grid-column-gap: 0.5rem;
+    column-gap: 0.5rem;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+
+    a,
+    .coming-soon {
+        width: 400px;
+        box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;
+        border-radius: 10px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        align-items: center;
+
+        text-decoration: none !important;
+
+        background-color: white;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #d3e9ff;
+        }
+
+        .index {
+            height: 100%;
+
+            background: linear-gradient(180deg, #3188ef, #205fc7);
+            box-shadow: rgba(0, 0, 0, 0.17) 0px 4px 9px 0px;
             border-radius: 10px;
-            font-size: 26px;
-            line-height: 36px;
-            font-weight: 600;
-            padding: 0;
 
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
 
-            .index {
-                font-size: 40px;
-                border-right: 1px solid #3498db;
+            span {
+                color: white;
                 padding: 1.5rem;
-            }
+                flex: 1;
+                font-size: 40px;
 
-            .title {
-                margin: 1.5rem;
+                display: flex;
+                align-items: center;
             }
 
             small {
-                color: #bdc3c7;
+                text-align: center;
+                color: white;
                 font-size: 14px;
-                margin-left: auto;
-                padding-right: 1.5rem;
+
+                padding: 0.5rem;
+                white-space: nowrap;
+
+                background: #007bff;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+
+                min-width: 120px;
 
                 i {
-                    color: #bdc3c7;
+                    color: white;
                 }
+            }
+        }
+
+        .info {
+            margin: 1.5rem;
+
+            h3 {
+                font-size: 16px;
+                line-height: 36px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 12px;
             }
         }
     }
