@@ -37,7 +37,7 @@ section {
   bottom: 0;
   display: block;
   background: url(/images/programming.jpg) no-repeat left;
-  background-size: 100%;
+  background-size: cover;
   mix-blend-mode: luminosity;
   opacity: 0.25;
   filter: blur(3px);
@@ -138,5 +138,16 @@ h1 {
   color: white;
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+@media (max-width: 600px) {
+  .articles {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  .articles a,
+  .articles .coming-soon {
+    max-width: 320px;
+  }
 }
 
