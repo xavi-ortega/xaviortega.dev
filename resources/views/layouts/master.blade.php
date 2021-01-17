@@ -42,13 +42,19 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a href="/" class="navbar-brand d-flex align-items-center">
+            <a href="/" class="navbar-brand d-none d-md-flex align-items-center">
                 <span class="mr-2">{</span>
                 xaviortega.dev
                 <span class="ml-2">}</span>
             </a>
 
-            <ul class="navbar-nav ml-auto">
+            <a href="/" class="navbar-brand d-flex d-md-none align-items-center">
+                <span class="mr-2">{</span>
+                x
+                <span class="ml-2">}</span>
+            </a>
+
+            <ul class="navbar-nav ml-auto mr-2 mr-md-0">
                 <li class="nav-item">
                     <a class="nav-link" href="/about">About</a>
                 </li>
@@ -70,7 +76,7 @@
                 </ul>
 
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">Icons designed by <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">Flaticon</a></li>
+                    <li class="nav-item text-center">Icons designed by <br class="d-block d-md-none"> <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">Flaticon</a></li>
                 </ul>
             </div>
 
