@@ -91,6 +91,11 @@ pre .token.keyword:not([class*=ext-]) {
   font-weight: bold;
 }
 
+ul li::marker {
+  color: #e83e8c;
+  font-size: 20px;
+}
+
 footer .feedback {
   display: flex;
   justify-content: flex-end;
