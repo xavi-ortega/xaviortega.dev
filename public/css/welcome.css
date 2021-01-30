@@ -10,12 +10,17 @@ section {
 .banner {
   position: relative;
   padding: 3rem 1rem;
-  background: linear-gradient(to right, #5b79a2 0%, #2e4469 100%);
+  background: url(/images/programming.png);
+  background: url(/images/programming.png), linear-gradient(to right, #5b79a2 0%, #2e4469 100%);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
   border-radius: 10px;
 }
 
 .banner h1 {
   font-size: 38px;
+  text-shadow: 1px 1px #000000;
 }
 
 .banner .text {
@@ -26,21 +31,7 @@ section {
 
 .banner .text p {
   color: rgba(255, 255, 255, 0.75);
-}
-
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: block;
-  background: url(/images/programming.jpg) no-repeat left;
-  background-size: cover;
-  mix-blend-mode: luminosity;
-  opacity: 0.25;
-  filter: blur(3px);
+  text-shadow: 1px 1px #000000;
 }
 
 .articles {

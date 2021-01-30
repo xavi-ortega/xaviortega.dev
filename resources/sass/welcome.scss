@@ -10,15 +10,18 @@ section {
 .banner {
     position: relative;
     padding: 3rem 1rem;
-    background: linear-gradient(
-        to right,
-        rgb(91, 121, 162) 0%,
-        rgb(46, 68, 105) 100%
-    );
+    background: url(/images/programming.png);
+    background: url(/images/programming.png),
+        linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+
     border-radius: 10px;
 
     h1 {
         font-size: 38px;
+        text-shadow: 1px 1px #000000;
     }
 
     .text {
@@ -28,22 +31,8 @@ section {
 
         p {
             color: hsla(0, 0%, 100%, 0.75);
+            text-shadow: 1px 1px #000000;
         }
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-        background: url(/images/programming.jpg) no-repeat left;
-        background-size: cover;
-        mix-blend-mode: luminosity;
-        opacity: 0.25;
-        filter: blur(3px);
     }
 }
 

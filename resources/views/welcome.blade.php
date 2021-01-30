@@ -44,7 +44,7 @@
                 <small><i class="fas fa-clock"></i> Coming soon</small>
             </div>
             <div class="info">
-                <h3>Custom Form Control</h3>
+                <h3>Services Pattern</h3>
                 <p></p>
             </div>
         </div>
