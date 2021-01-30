@@ -1,0 +1,33 @@
+<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://xaviortega.dev/</loc>
+        <lastmod>2021-01-30T14:18:17+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://xaviortega.dev/about</loc>
+        <lastmod>2021-01-30T14:18:17+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>
+            https://xaviortega.dev/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/project-structure
+        </loc>
+        <lastmod>2021-01-30T14:18:17+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>
+            https://xaviortega.dev/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/authentication
+        </loc>
+        <lastmod>2021-01-30T14:18:17+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>
+            https://xaviortega.dev/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/form-management
+        </loc>
+        <lastmod>2021-01-30T14:18:17+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+</urlset>
