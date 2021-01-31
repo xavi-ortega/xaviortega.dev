@@ -37,8 +37,9 @@ class ArticlesController extends Controller
      */
     public function show(string $series, string $slug)
     {
+        $full_slug = $series . '/' . $slug;
 
-        $article = $this->articles->get($series, $slug);
+        $article = Article::where('slug', '=', $full_slug)->with('comments')->first();
 
         return view('article', [
             'article' => $article
@@ -108,6 +109,6 @@ class ArticlesController extends Controller
      */
     public function list(): Collection
     {
-        return $this->articles->getAvailableArticles();
+        return Article::all();
     }
 }

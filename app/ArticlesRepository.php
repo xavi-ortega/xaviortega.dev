@@ -40,52 +40,24 @@ class ArticlesRepository
      * Get the given article.
      *
      * @param  string  $slug
-     * @return App\Article|null
+     * @return string
      */
-    public function get(string $series, string $slug): Article
+    public function getContent(string $slug): string
     {
-        $full_slug = $series . '/' . $slug;
+        return $this->cache->remember(
+            'article.' . $slug,
+            5,
+            function () use ($slug) {
+                $path = base_path('resources/articles/' . $slug . '.md');
 
-        $article = Article::where('slug', '=', $full_slug)->with('comments')->first();
+                if ($this->files->exists($path)) {
+                    $content = (new Parsedown)->text($this->files->get($path));
 
-        $path = base_path('resources/articles/' . $full_slug . '.md');
+                    return $content;
+                }
 
-        if ($this->files->exists($path)) {
-            $content = (new Parsedown)->text($this->files->get($path));
-
-            $article->content = $content;
-
-            $introduction = explode('Introduction', strip_tags($content))[1];
-
-            $article->description = mb_substr($introduction, 0, 150) . '...';
-
-            return $article;
-        }
-
-        return null;
-    }
-
-    /**
-     * Get the publicly available articles
-     *
-     * @return Illuminate\Database\Eloquent\Collection
-     */
-    public function getAvailableArticles(): Collection
-    {
-        return Article::all()->map(function ($article) {
-            $path = base_path('resources/articles/' . $article->slug . '.md');
-
-            if ($this->files->exists($path)) {
-                $content = (new Parsedown)->text($this->files->get($path));
-
-                $article->content = $content;
-
-                $introduction = explode('Introduction', strip_tags($content))[1];
-
-                $article->description = mb_substr($introduction, 0, 150) . '...';
-
-                return $article;
+                return '';
             }
-        });
+        );
     }
 }
