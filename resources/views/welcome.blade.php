@@ -44,7 +44,7 @@
                 <small><i class="fas fa-clock"></i> Coming soon</small>
             </div>
             <div class="info">
-                <h3>Services Pattern</h3>
+                <h3>State Management with Services</h3>
                 <p></p>
             </div>
         </div>

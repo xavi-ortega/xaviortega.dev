@@ -88,6 +88,15 @@ pre {
     }
 }
 
+ul {
+    li {
+        &::marker {
+            color: #e83e8c;
+            font-size: 20px;
+        }
+    }
+}
+
 footer {
     .feedback {
         display: flex;

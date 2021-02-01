@@ -39,7 +39,7 @@ class ArticlesController extends Controller
     {
         $full_slug = $series . '/' . $slug;
 
-        $article = Article::where('slug', '=', $full_slug)->with('comments')->first();
+        $article = Article::where('slug', '=', $full_slug)->with('comments')->firstOrFail();
 
         return view('article', [
             'article' => $article
