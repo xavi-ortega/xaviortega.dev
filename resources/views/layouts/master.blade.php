@@ -14,8 +14,8 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700;900&display=swap" rel="stylesheet" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin>
 
     <!-- Styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -23,12 +23,8 @@
     @yield('page-styles')
 
     <!-- RENDER-BLOCKING ASSETS -->
-    <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="/css/fontawesome.min.css" rel="stylesheet" />
-        <link href="/css/solid.min.css" rel="stylesheet" />
-    </noscript>
+    <link rel="preload" href="/css/fontawesome.min.css" as="style">
+    <link rel="preload" href="/css/solid.min.css" as="style">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -88,6 +84,9 @@
 
         </nav>
     </footer>
+
+    <link href="/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="/css/solid.min.css" rel="stylesheet" />
 
     <script src="/js/prism.js" defer></script>
     <script src="{{ mix('js/manifest.js') }}" defer></script>
