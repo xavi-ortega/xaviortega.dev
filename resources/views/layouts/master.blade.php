@@ -22,6 +22,15 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     @yield('page-styles')
 
+    <!-- RENDER-BLOCKING ASSETS -->
+    <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="/css/fontawesome.min.css" rel="stylesheet" />
+        <link href="/css/solid.min.css" rel="stylesheet" />
+    </noscript>
+
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T3Z1PNSV60"></script>
     <script>
@@ -79,14 +88,6 @@
 
         </nav>
     </footer>
-
-    <!-- RENDER-BLOCKING ASSETS -->
-    <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link href="/css/fontawesome.min.css" rel="stylesheet" />
-        <link href="/css/solid.min.css" rel="stylesheet" />
-    </noscript>
 
     <script src="/js/prism.js" defer></script>
     <script src="{{ mix('js/manifest.js') }}" defer></script>
