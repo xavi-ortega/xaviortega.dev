@@ -7,7 +7,7 @@
 @endsection
 
 @section('page-styles')
-<link rel="stylesheet" href="/css/welcome.css">
+<link rel="stylesheet" href="{{ mix('css/welcome.css') }}">
 @endsection
 
 @section('body')

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page-styles')
-<link rel="stylesheet" href="/css/about.css">
+<link rel="stylesheet" href="{{ mix('css/about.css') }}">
 @endsection
 
 @section('title', 'About Xavi Ortega')

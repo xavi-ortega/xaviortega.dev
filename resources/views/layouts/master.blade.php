@@ -21,8 +21,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/fontawesome.min.css" rel="stylesheet" />
     <link href="/css/solid.min.css" rel="stylesheet" />
-    <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/prism.css" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     @yield('page-styles')
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -84,8 +83,10 @@
     </footer>
 
     <script src="/js/prism.js"></script>
-    <script src="/js/app.js"></script>
-    <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js"></script>
+    <script src="{{ mix('js/manifest.js') }}"></script>
+    <script src="{{ mix('js/vendor.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="//cookieinfoscript.com/js/cookieinfo.min.js" type="text/javascript" id="cookieinfo"></script>
 
     @yield('page-scripts')
 </body>

@@ -7,7 +7,8 @@
 @endsection
 
 @section('page-styles')
-<link rel="stylesheet" href="/css/article.css">
+<link href="/css/prism.css" rel="stylesheet">
+<link href="{{ mix('/css/article.css') }}" rel="stylesheet">
 @endsection
 
 @section('body')
@@ -85,5 +86,5 @@
 @endsection
 
 @section('page-scripts')
-<script src="/js/article.js"></script>
+<script src="{{ mix('js/article.js') }}"></script>
 @endsection
