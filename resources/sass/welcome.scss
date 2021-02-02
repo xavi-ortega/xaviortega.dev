@@ -11,7 +11,7 @@ section {
     position: relative;
     padding: 3rem 1rem;
     background: url(/images/programming.png);
-    background: url(/images/programming.png),
+    background: url(/images/programming.webp),
         linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%);
     background-repeat: no-repeat;
     background-position: left;
@@ -116,7 +116,7 @@ section {
         .info {
             margin: 1.5rem;
 
-            h3 {
+            h2 {
                 font-size: 16px;
                 line-height: 36px;
                 font-weight: 600;

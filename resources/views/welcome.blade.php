@@ -4,6 +4,11 @@
 
 @section('page-meta')
 <meta name="description" content="I love programming and I improve my skills everyday. Welcome to my personal blog, where I will share everything I think its worth">
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="xaviortega.dev • Always learning" />
+<meta property="og:url" content="https://xaviortega.dev" />
+<meta property="og:image" content="https://xaviortega.dev/favicon.png" />
 @endsection
 
 @section('page-styles')
@@ -31,7 +36,7 @@
                 <small><i class="fas fa-clock"></i> {{ $article->read_time }}min read</small>
             </div>
             <div class="info">
-                <h3>{{ $article->shortTitle }}</h3>
+                <h2>{{ $article->shortTitle }}</h2>
                 <p>{{ $article->description }}</p>
             </div>
 
@@ -44,7 +49,7 @@
                 <small><i class="fas fa-clock"></i> Coming soon</small>
             </div>
             <div class="info">
-                <h3>State Management with Services</h3>
+                <h2>State Management with Services</h2>
                 <p></p>
             </div>
         </div>

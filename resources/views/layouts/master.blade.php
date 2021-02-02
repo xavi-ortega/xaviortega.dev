@@ -70,8 +70,8 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://github.com/xavi-ortega" title="Github" rel="noreferrer"><img class="img-fluid" src="/images/github.svg" alt="xavi-ortega"></a></li>
-                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/xavi-ortega/" title="Linkedin" rel="noreferrer"><img class="img-fluid" src="/images/linkedin.svg" alt="xavi-ortega"></a></li>
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://github.com/xavi-ortega" title="Github" rel="noreferrer"><img class="img-fluid" width="30" height="30" src="/images/github.svg" alt="xavi-ortega"></a></li>
+                    <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/xavi-ortega/" title="Linkedin" rel="noreferrer"><img class="img-fluid" width="30" height="30" src="/images/linkedin.svg" alt="xavi-ortega"></a></li>
                 </ul>
 
                 <ul class="navbar-nav mx-auto">
@@ -82,11 +82,11 @@
         </nav>
     </footer>
 
-    <script src="/js/prism.js"></script>
-    <script src="{{ mix('js/manifest.js') }}"></script>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
-    <script src="//cookieinfoscript.com/js/cookieinfo.min.js" type="text/javascript" id="cookieinfo"></script>
+    <script src="/js/prism.js" defer></script>
+    <script src="{{ mix('js/manifest.js') }}" defer></script>
+    <script src="{{ mix('js/vendor.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="//cookieinfoscript.com/js/cookieinfo.min.js" type="text/javascript" id="cookieinfo" defer></script>
 
     @yield('page-scripts')
 </body>
