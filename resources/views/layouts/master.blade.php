@@ -19,8 +19,6 @@
 
     <!-- Styles -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/fontawesome.min.css" rel="stylesheet" />
-    <link href="/css/solid.min.css" rel="stylesheet" />
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     @yield('page-styles')
 
@@ -82,11 +80,19 @@
         </nav>
     </footer>
 
+    <!-- RENDER-BLOCKING ASSETS -->
+    <link rel="preload" href="/css/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="/css/fontawesome.min.css" rel="stylesheet" />
+        <link href="/css/solid.min.css" rel="stylesheet" />
+    </noscript>
+
     <script src="/js/prism.js" defer></script>
     <script src="{{ mix('js/manifest.js') }}" defer></script>
     <script src="{{ mix('js/vendor.js') }}" defer></script>
     <script src="{{ mix('js/app.js') }}" defer></script>
-    <script src="//cookieinfoscript.com/js/cookieinfo.min.js" type="text/javascript" id="cookieinfo" defer></script>
+    <script src="/js/cookieinfo.min.js" type="text/javascript" id="cookieinfo" defer></script>
 
     @yield('page-scripts')
 </body>
