@@ -44,20 +44,20 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a href="/" class="navbar-brand d-none d-md-flex align-items-center">
+        <div class="container clearfix">
+            <a href="/" class="navbar-brand float-left ml-0 d-none d-md-flex align-items-center">
                 <span class="mr-2">{</span>
                 xaviortega.dev
                 <span class="ml-2">}</span>
             </a>
 
-            <a href="/" class="navbar-brand d-flex d-md-none align-items-center">
+            <a href="/" class="navbar-brand float-left ml-0 d-flex d-md-none align-items-center">
                 <span class="mr-2">{</span>
                 x
                 <span class="ml-2">}</span>
             </a>
 
-            <ul class="navbar-nav ml-auto mr-2 mr-md-0">
+            <ul class="navbar-nav fix right mr-0">
                 <li class="nav-item">
                     <a class="nav-link" href="/about">About</a>
                 </li>
@@ -71,7 +71,7 @@
     </div>
 
     <footer>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light flex">
             <div class="container">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" target="_blank" href="https://github.com/xavi-ortega" title="Github" rel="noreferrer"><img class="img-fluid" width="30" height="30" src="/images/github.svg" alt="xavi-ortega"></a></li>
