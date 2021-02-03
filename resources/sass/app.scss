@@ -160,34 +160,49 @@ img {
 }
 
 .navbar {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     box-shadow: 2px 0 5px #0000001f;
     padding: 1rem;
     background-color: white;
-}
 
-.navbar .container,
-.navbar .container-fluid,
-.navbar .container-lg,
-.navbar .container-md,
-.navbar .container-sm,
-.navbar .container-xl {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    .container {
+        position: relative;
+
+        ul.fix {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+            &.left {
+                left: 15px;
+            }
+
+            &.right {
+                right: 15px;
+            }
+        }
+    }
+
+    &.flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 .navbar-brand {
@@ -215,10 +230,6 @@ img {
 }
 
 .navbar-nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
@@ -231,12 +242,12 @@ img {
 }
 
 @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav {
+    .navbar.flex .navbar-nav {
         -ms-flex-direction: row;
         flex-direction: row;
     }
 
-    .navbar-expand-lg .navbar-nav .nav-link {
+    .navbar.flex .navbar-nav .nav-link {
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
