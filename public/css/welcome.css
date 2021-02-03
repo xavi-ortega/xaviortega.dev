@@ -11,7 +11,7 @@ section {
   position: relative;
   padding: 3rem 1rem;
   background: url(/images/programming.png);
-  background: url(/images/programming.png), linear-gradient(to right, #5b79a2 0%, #2e4469 100%);
+  background: url(/images/programming.webp), linear-gradient(to right, #5b79a2 0%, #2e4469 100%);
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -110,16 +110,16 @@ section {
   margin: 1.5rem;
 }
 
-.articles a .info h3,
-.articles .coming-soon .info h3 {
-  font-size: 16px;
+.articles a .info h2,
+.articles .coming-soon .info h2 {
+  font-size: 18px;
   line-height: 36px;
   font-weight: 600;
 }
 
 .articles a .info p,
 .articles .coming-soon .info p {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 h1 {

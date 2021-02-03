@@ -18,11 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin>
 
     <!-- Styles -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
     @yield('page-styles')
 
     <!-- RENDER-BLOCKING ASSETS -->
+    <link rel="preload" href="/css/utilities.min.css" as="style">
     <link rel="preload" href="/css/fontawesome.min.css" as="style">
     <link rel="preload" href="/css/solid.min.css" as="style">
 
@@ -85,11 +86,13 @@
         </nav>
     </footer>
 
+    <link href="/css/utilities.min.css" rel="stylesheet" />
     <link href="/css/fontawesome.min.css" rel="stylesheet" />
     <link href="/css/solid.min.css" rel="stylesheet" />
 
     <script src="/js/prism.js" defer></script>
-    <script src="{{ mix('js/manifest.js') }}" defer></script>
+    <script src="{{ mix('js/manifest.js') }}" defer>
+    </script>
     <script src="{{ mix('js/vendor.js') }}" defer></script>
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="/js/cookieinfo.min.js" type="text/javascript" id="cookieinfo" defer></script>
