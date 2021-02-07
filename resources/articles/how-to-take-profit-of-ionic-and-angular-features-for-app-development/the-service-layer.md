@@ -122,7 +122,7 @@ Once created, we will add the methods needed to cover the quiz needs.
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, mapTo } from 'rxjs/operators';
 import { Quiz, QuizResults } from 'src/app/interfaces/quiz';
 import { HttpCommonService } from 'src/app/utils/http-common.service';
 import { environment } from 'src/environments/environment';
@@ -175,6 +175,7 @@ export class QuizService {
         }
       )
       .pipe(
+        mapTo(true),
         catchError((err) => {
           console.error('quiz -> sendResults', err);
           return of(false);

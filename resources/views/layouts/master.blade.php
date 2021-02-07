@@ -26,6 +26,7 @@
     <link rel="preload" href="/css/utilities.min.css" as="style">
     <link rel="preload" href="/css/fontawesome.min.css" as="style">
     <link rel="preload" href="/css/solid.min.css" as="style">
+    <link rel="preload" href="/css/bootstrap.min.css" as="style">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -79,7 +80,7 @@
                 </ul>
 
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item text-center">Icons designed by <br class="d-block d-md-none"> <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">Flaticon</a></li>
+                    <li class="nav-item text-center">&copy; Xavi Ortega, 2021</li>
                 </ul>
             </div>
 

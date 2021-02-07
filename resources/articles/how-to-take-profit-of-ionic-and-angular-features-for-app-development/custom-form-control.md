@@ -116,49 +116,49 @@ Finally, we have to implement the `ControlValueAccessor` interface that brings i
 
 ```js
 export class ReorderControlComponent implements OnInit, ControlValueAccessor {
-  @Input() items: ReorderItem[];
+    @Input() items: ReorderItem[];
 
-  disabled: boolean = false;
+    disabled: boolean = false;
 
-  onChange = (_: any) => {};
-  onTouched = () => {};
+    onChange = (_: any) => {};
+    onTouched = () => {};
 
-  constructor() {}
+    constructor() {}
 
-  ngOnInit() {}
+    ngOnInit() {}
 
-  writeValue(value: number[]): void {
-    if (value && value.length) {
-      let newItemsOrder = [];
+    writeValue(value: number[]): void {
+        if (value && value.length) {
+            let newItemsOrder = [];
 
-      value.forEach((id) => {
-        newItemsOrder.push(this.items.find((item) => item.value === id));
-      });
+            value.forEach(id => {
+                newItemsOrder.push(this.items.find(item => item.value === id));
+            });
 
-      this.items = [...newItemsOrder];
+            this.items = [...newItemsOrder];
+        }
     }
-  }
 
-  registerOnChange(fn: any): void {
-    this.onChange = fn;
-  }
+    registerOnChange(fn: any): void {
+        this.onChange = fn;
+    }
 
-  registerOnTouched(fn: any): void {
-    this.onTouched = fn;
-  }
+    registerOnTouched(fn: any): void {
+        this.onTouched = fn;
+    }
 
-  setDisabledState?(isDisabled: boolean): void {
-    this.disabled = isDisabled;
-  }
+    setDisabledState(isDisabled: boolean): void {
+        this.disabled = isDisabled;
+    }
 
-  doReorder(ev: CustomEvent<ItemReorderEventDetail>) {
-    this.items = ev.detail.complete(this.items);
+    doReorder(ev: CustomEvent<ItemReorderEventDetail>) {
+        this.items = ev.detail.complete(this.items);
 
-    const value = this.items.map(item => item.value);
+        const value = this.items.map(item => item.value);
 
-    this.onTouched();
-    this.onChange(value);
-  }
+        this.onTouched();
+        this.onChange(value);
+    }
 }
 ```
 
