@@ -12,7 +12,6 @@
 @endsection
 
 @section('page-styles')
-<link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/prism.css" rel="stylesheet">
 <link href="{{ mix('/css/article.css') }}" rel="stylesheet">
 @endsection

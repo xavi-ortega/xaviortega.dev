@@ -59,7 +59,7 @@ section {
   text-decoration: none !important;
   background-color: white;
   transition: background-color 0.3s ease;
-  min-height: 203px;
+  min-height: 239px;
 }
 
 .articles a:hover,
@@ -70,7 +70,7 @@ section {
 .articles a .index,
 .articles .coming-soon .index {
   height: 100%;
-  min-height: 203px;
+  min-height: 239px;
   background: linear-gradient(180deg, #3188ef, #205fc7);
   box-shadow: rgba(0, 0, 0, 0.17) 0px 4px 9px 0px;
   border-radius: 10px;

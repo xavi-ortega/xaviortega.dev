@@ -17,16 +17,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700;900&display=swap" rel="stylesheet" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin>
 
-    <!-- Styles -->
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
-    @yield('page-styles')
 
     <!-- RENDER-BLOCKING ASSETS -->
     <link rel="preload" href="/css/utilities.min.css" as="style">
     <link rel="preload" href="/css/fontawesome.min.css" as="style">
     <link rel="preload" href="/css/solid.min.css" as="style">
     <link rel="preload" href="/css/bootstrap.min.css" as="style">
+
+
+    <!-- Styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    @yield('page-styles')
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
