@@ -149,5 +149,9 @@ h1 {
   .articles .coming-soon .index {
     min-height: 277px;
   }
+
+  .articles .info h2 {
+    font-size: 16px !important;
+  }
 }
 

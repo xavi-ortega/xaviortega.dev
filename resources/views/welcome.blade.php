@@ -49,7 +49,7 @@
                 <small><i class="fas fa-clock"></i> Coming soon</small>
             </div>
             <div class="info">
-                <h2>State Management with Services</h2>
+                <h2>Data mocking</h2>
                 <p></p>
             </div>
         </div>

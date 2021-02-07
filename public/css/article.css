@@ -213,3 +213,17 @@ i.text-danger {
   color: #63b1ff;
 }
 
+@media (max-width: 480px) {
+  blockquote::before {
+    top: 0;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: 40px;
+  }
+
+  blockquote p {
+    margin-left: 0;
+    margin-top: 120px;
+  }
+}
+

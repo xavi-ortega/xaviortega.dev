@@ -29,21 +29,28 @@
         <loc>
             https://xaviortega.dev/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/form-management
         </loc>
-        <lastmod>2021-01-30T14:18:17+00:00</lastmod>
+        <lastmod>2021-02-02T14:18:17+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>
             https://xaviortega.dev/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/custom-form-control
         </loc>
-        <lastmod>2021-01-30T14:18:17+00:00</lastmod>
+        <lastmod>2021-02-06T14:18:17+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>
             https://xaviortega.dev/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/the-service-layer
         </loc>
-        <lastmod>2021-01-30T14:18:17+00:00</lastmod>
+        <lastmod>2021-02-06T14:18:17+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+        <url>
+        <loc>
+            https://xaviortega.dev/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/state-management-with-services
+        </loc>
+        <lastmod>2021-02-07T14:18:17+00:00</lastmod>
         <priority>0.80</priority>
     </url>
 </urlset>

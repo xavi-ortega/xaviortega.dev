@@ -10,7 +10,7 @@ To demonstrate how the service layer is implemented, today we will create a serv
 
 ## Previous steps
 
-Before we start creating our services, we need to make a small modification to the auth.service.ts that we created in the <a href="/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/authentication" target="_blank">Authentication article</a>.
+Before we start creating our services, we need to make a small modification to the auth.service.ts that we created in the <a href="/article/how-to-take-profit-of-ionic-and-angular-features-for-app-development/authentication" title="Authentication" target="_blank">Authentication article</a>.
 
 We will create a service that will be used as a helper to store headers and other usual bits and pieces that have to do with the HTTP protocol.
 
