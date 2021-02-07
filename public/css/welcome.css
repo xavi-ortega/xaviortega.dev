@@ -48,6 +48,7 @@ section {
 
 .articles a,
 .articles .coming-soon {
+  position: relative;
   width: 400px;
   box-shadow: rgba(36, 37, 38, 0.08) 4px 4px 15px 0px;
   border-radius: 10px;
@@ -58,6 +59,7 @@ section {
   text-decoration: none !important;
   background-color: white;
   transition: background-color 0.3s ease;
+  min-height: 203px;
 }
 
 .articles a:hover,
@@ -68,6 +70,7 @@ section {
 .articles a .index,
 .articles .coming-soon .index {
   height: 100%;
+  min-height: 203px;
   background: linear-gradient(180deg, #3188ef, #205fc7);
   box-shadow: rgba(0, 0, 0, 0.17) 0px 4px 9px 0px;
   border-radius: 10px;
@@ -131,7 +134,7 @@ h1 {
           background-clip: text;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .articles {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
@@ -139,6 +142,12 @@ h1 {
   .articles a,
   .articles .coming-soon {
     max-width: 320px;
+    min-height: 277px;
+  }
+
+  .articles a .index,
+  .articles .coming-soon .index {
+    min-height: 277px;
   }
 }
 
