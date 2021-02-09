@@ -184,6 +184,12 @@ img {
     }
 }
 
+footer {
+    .navbar {
+        box-shadow: none;
+    }
+}
+
 .navbar {
     box-shadow: 2px 0 5px #0000001f;
     padding: 1rem;
@@ -264,6 +270,15 @@ img {
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
+}
+
+.newsletter {
+    box-shadow: 2px 0 5px #0000001f;
+    background: white;
+
+    .alert {
+        max-width: fit-content;
+    }
 }
 
 @media (min-width: 992px) {

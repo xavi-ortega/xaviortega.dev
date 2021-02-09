@@ -10,12 +10,15 @@ section {
 .banner {
   position: relative;
   padding: 3rem 1rem;
+  border-radius: 10px;
+}
+
+.banner.programming {
   background: url(/images/programming.png);
   background: url(/images/programming.webp), linear-gradient(to right, #5b79a2 0%, #2e4469 100%);
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
-  border-radius: 10px;
 }
 
 .banner h1 {

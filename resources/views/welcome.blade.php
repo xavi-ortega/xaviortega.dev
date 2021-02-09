@@ -17,7 +17,7 @@
 
 @section('body')
 <section>
-    <div class="banner mb-5">
+    <div class="banner programming mb-5">
 
         <div class="text">
             <h1 class="text-center mb-5">Ionic and Angular features <br>for App Development</h1>
