@@ -19,13 +19,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'NavController@index');
 Route::get('/about', 'NavController@about');
 Route::get('/article/{series}/{slug}', 'ArticlesController@show');
+Route::post('/subscribe', 'NewsletterController@subscribe');
 
 Route::get('/notification', function () {
     $article = Article::all()->last();
 
     $user = User::find(1);
 
-    $user->notify(new NewArticle($article));
+    // $user->notify(new NewArticle($article));
 
     return (new NewArticle($article))
         ->toMail(null);
