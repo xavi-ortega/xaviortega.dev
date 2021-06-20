@@ -167,7 +167,7 @@ export function update(
 ): any[] {
     const state = state$.getValue();
 
-    const index = state.findIndex(item => item.id === id);
+    const index = state.findIndex((item) => item.id === id);
 
     state[index] = { ...state[index], ...value };
 

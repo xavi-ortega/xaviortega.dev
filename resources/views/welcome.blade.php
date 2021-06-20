@@ -45,11 +45,11 @@
         @endforeach
         <div class="coming-soon">
             <div class="index">
-                <span>{{ $index + 2 }}</span>
+                <span>{{ ($index ?? 0) + 2 }}</span>
                 <small><i class="fas fa-clock"></i> Coming soon</small>
             </div>
             <div class="info">
-                <h2>Data mocking</h2>
+                <h2>Handle HTTP Errors</h2>
                 <p></p>
             </div>
         </div>

@@ -256,37 +256,37 @@ const routes: Routes = [
     {
         path: "",
         pathMatch: "full",
-        redirectTo: "home"
+        redirectTo: "home",
     },
     {
         path: "login",
         loadChildren: () =>
-            import("./pages/login/login.module").then(m => m.LoginPageModule)
+            import("./pages/login/login.module").then((m) => m.LoginPageModule),
     },
     {
         path: "register",
         loadChildren: () =>
             import("./pages/register/register.module").then(
-                m => m.RegisterPageModule
-            )
+                (m) => m.RegisterPageModule
+            ),
     },
     {
         path: "home",
         loadChildren: () =>
-            import("./pages/home/home.module").then(m => m.HomePageModule)
+            import("./pages/home/home.module").then((m) => m.HomePageModule),
     },
     {
         path: "quiz/:id",
         loadChildren: () =>
-            import("./pages/quiz/quiz.module").then(m => m.QuizPageModule)
-    }
+            import("./pages/quiz/quiz.module").then((m) => m.QuizPageModule),
+    },
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
     ],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}
 ```

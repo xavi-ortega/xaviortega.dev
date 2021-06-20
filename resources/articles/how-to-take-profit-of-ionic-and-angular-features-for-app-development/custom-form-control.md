@@ -24,7 +24,7 @@ import { ReorderControlComponent } from "./reorder-control/reorder-control.compo
 @NgModule({
     declarations: [ReorderControlComponent],
     imports: [CommonModule],
-    exports: [ReorderControlComponent]
+    exports: [ReorderControlComponent],
 })
 export class ComponentsModule {}
 ```
@@ -53,7 +53,7 @@ interface ReorderItem {
 @Component({
     selector: "reorder-control",
     templateUrl: "./reorder-control.component.html",
-    styleUrls: ["./reorder-control.component.scss"]
+    styleUrls: ["./reorder-control.component.scss"],
 })
 export class ReorderControlComponent implements OnInit {
     @Input() items: ReorderItem[];
@@ -131,8 +131,10 @@ export class ReorderControlComponent implements OnInit, ControlValueAccessor {
         if (value && value.length) {
             let newItemsOrder = [];
 
-            value.forEach(id => {
-                newItemsOrder.push(this.items.find(item => item.value === id));
+            value.forEach((id) => {
+                newItemsOrder.push(
+                    this.items.find((item) => item.value === id)
+                );
             });
 
             this.items = [...newItemsOrder];
@@ -154,7 +156,7 @@ export class ReorderControlComponent implements OnInit, ControlValueAccessor {
     doReorder(ev: CustomEvent<ItemReorderEventDetail>) {
         this.items = ev.detail.complete(this.items);
 
-        const value = this.items.map(item => item.value);
+        const value = this.items.map((item) => item.value);
 
         this.onTouched();
         this.onChange(value);
@@ -190,7 +192,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 @Component({
     selector: "app-home",
     templateUrl: "./home.page.html",
-    styleUrls: ["./home.page.scss"]
+    styleUrls: ["./home.page.scss"],
 })
 export class HomePage implements OnInit {
     homeForm: FormGroup;
@@ -198,27 +200,27 @@ export class HomePage implements OnInit {
     items = [
         {
             label: "Item 1",
-            value: 1
+            value: 1,
         },
         {
             label: "Item 2",
-            value: 3
+            value: 3,
         },
         {
             label: "Item 3",
-            value: 5
+            value: 5,
         },
         {
             label: "Item 4",
-            value: 7
-        }
+            value: 7,
+        },
     ];
 
     constructor() {}
 
     ngOnInit() {
         this.homeForm = new FormGroup({
-            reorder: new FormControl([5, 3, 1, 7], Validators.required)
+            reorder: new FormControl([5, 3, 1, 7], Validators.required),
         });
 
         this.homeForm.valueChanges.subscribe(console.log);

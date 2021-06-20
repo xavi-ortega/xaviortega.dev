@@ -262,10 +262,10 @@ import { UnauthorizedInterceptor } from "./interceptors/unauthorized.interceptor
         {
             provide: HTTP_INTERCEPTORS,
             useClass: UnauthorizedInterceptor,
-            multi: true
-        }
+            multi: true,
+        },
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
 ```

@@ -19,7 +19,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 @Component({
     selector: "app-login",
     templateUrl: "./login.page.html",
-    styleUrls: ["./login.page.scss"]
+    styleUrls: ["./login.page.scss"],
 })
 export class LoginPage implements OnInit {
     loginForm: FormGroup;
@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
     ngOnInit() {
         this.loginForm = new FormGroup({
             email: new FormControl("", [Validators.required, Validators.email]),
-            password: new FormControl("", Validators.required)
+            password: new FormControl("", Validators.required),
         });
     }
 }
