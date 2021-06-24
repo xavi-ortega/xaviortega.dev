@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65ff4cb1b9860394044ed5c79ffa5bc9",
+    "content-hash": "fcb8350e7fad687df4c801262a460e6b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -956,6 +956,62 @@
                 "source": "https://github.com/guzzle/psr7/tree/1.8.2"
             },
             "time": "2021-04-26T09:17:50+00:00"
+        },
+        {
+            "name": "jacobbennett/laravel-http2serverpush",
+            "version": "v5.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JacobBennett/laravel-HTTP2ServerPush.git",
+                "reference": "141162e5bcb76f699c2720a8940f527f4ed671dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JacobBennett/laravel-HTTP2ServerPush/zipball/141162e5bcb76f699c2720a8940f527f4ed671dd",
+                "reference": "141162e5bcb76f699c2720a8940f527f4ed671dd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~6.0|~7.0|~8.0",
+                "illuminate/support": "~6.0|~7.0|~8.0",
+                "php": "^7.0|^8.0",
+                "symfony/css-selector": "^2.7|^3.0|^4.0|^5.0",
+                "symfony/dom-crawler": "^2.7|^3.0|^4.0|^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5",
+                "scrutinizer/ocular": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JacobBennett\\Http2ServerPush\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Bennett",
+                    "email": "me@jakebennett.net",
+                    "homepage": "https://jakebennett.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A HTTP2 Server Push Middleware for Laravel 5",
+            "homepage": "https://github.com/jacobbennett/laravel-http2serverpush",
+            "keywords": [
+                "laravel",
+                "laravel-http2serverpush",
+                "serverpush"
+            ],
+            "support": {
+                "issues": "https://github.com/JacobBennett/laravel-HTTP2ServerPush/issues",
+                "source": "https://github.com/JacobBennett/laravel-HTTP2ServerPush/tree/v5.0.4"
+            },
+            "time": "2021-06-23T20:47:15+00:00"
         },
         {
             "name": "laravel/framework",
