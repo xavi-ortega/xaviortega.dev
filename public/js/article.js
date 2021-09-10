@@ -233,7 +233,7 @@ var Form = /*#__PURE__*/function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Datos\Personal\xaviortega.dev\resources\js\article.js */"./resources/js/article.js");
+module.exports = __webpack_require__(/*! /home/xavi/Workspace/xaviortega.dev/resources/js/article.js */"./resources/js/article.js");
 
 
 /***/ })

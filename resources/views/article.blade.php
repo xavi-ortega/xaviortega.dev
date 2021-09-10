@@ -20,7 +20,7 @@
 <article>
     {!! $article->content !!}
 
-    <footer class="mt-5">
+    <!-- <footer class="mt-5">
         <div class="comments">
             <h3>Opinions</h3>
 
@@ -86,7 +86,7 @@
             @endforeach
             @endif
         </div>
-    </footer>
+    </footer> -->
 </article>
 @endsection
 
