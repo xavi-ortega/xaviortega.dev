@@ -1,28 +1,28 @@
 {
-    "name": "laravel/laravel",
+    "name": "xavi-ortega/xaviortega.dev",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Xavi Ortega - The blog.",
     "keywords": [
-        "framework",
-        "laravel"
+        "personal blog",
+        "articles"
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3",
+        "php": "^8.0.2",
         "erusev/parsedown-extra": "^0.8.1",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "jacobbennett/laravel-http2serverpush": "^5.0",
-        "laravel/framework": "^8.12",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^9.0",
         "laravel/tinker": "^2.5",
         "symfony/browser-kit": "^5.1"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
+        "barryvdh/laravel-ide-helper": "^2.13",
+        "spatie/laravel-ignition": "^1.0",
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.4.2",
-        "nunomaduro/collision": "^5.0",
+        "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.3.3"
     },
     "config": {
