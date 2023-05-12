@@ -48,12 +48,10 @@ class ArticlesRepository
             'article.' . $slug,
             5,
             function () use ($slug) {
-                $path = base_path('resources/articles/' . $slug . '.md');
+                $path = storage_path('articles/' . $slug . '.md');
 
                 if ($this->files->exists($path)) {
-                    $content = (new Parsedown)->text($this->files->get($path));
-
-                    return $content;
+                    return (new Parsedown)->text($this->files->get($path));
                 }
 
                 return '';

@@ -78,7 +78,7 @@
         <div class="newsletter py-5" id="newsletter">
             <div class="container d-flex flex-column justify-content-center">
                 <h3 class="text-center mb-4">Stay tuned for upcoming articles</h3>
-                <form class="form-inline my-2 my-lg-0 mx-auto" method="POST" action="{{ url('/subscribe#newsletter') }}">
+                <form class="form-inline my-2 my-lg-0 mx-auto" method="POST" action="{{ url('/subscribe') }}">
                     @csrf
                     <input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Subscribe" name="email" value="{{ old('email') }}">
                     <button class="btn btn btn-outline-secondary my-2 my-sm-0 ml-auto" type="submit">Subscribe</button>

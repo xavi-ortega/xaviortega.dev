@@ -10,7 +10,7 @@ class NewsletterController extends Controller
     public function subscribe(Request $request)
     {
         $request->validate([
-            'email' => 'required|email:rfc,dns'
+            'email' => 'required|unique:users,email|email:rfc,dns'
         ]);
 
         $email = $request->get('email');
