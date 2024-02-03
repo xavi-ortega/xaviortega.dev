@@ -12,23 +12,26 @@
 @endsection
 
 @section('page-styles')
-<link rel="stylesheet" href="{{ mix('css/about.css') }}">
+<link rel="stylesheet" href="{{ mix('css/projects.css') }}">
 @endsection
 
 @section('body')
 <div class="wrapper">
-    <section>
-        <article class="article">
-            <div class="index">
-                LOGO
-            </div>
-            <div class="info">
-                <h3>GitInteractions</h3>
-                <p>
-                    GitInteractions is an analytical tool designed to scrutinize git repositories, extract relevant data, and generate insightful metrics aimed at enhancing a development team's performance and product quality. By producing comprehensive reports, it effectively visualizes the strengths and weaknesses of a team contributing to a Git repository. This allows for the identification of standout performers deserving of recognition, as well as individuals who might benefit from additional coaching to optimize their performance.
-                </p>
-            </div>
-        </article>
-    </section>
+    <a href="https://git-interactions.xaviortega.dev" target="_blank">
+        <section>
+            <article>
+                <figure>
+                    <img src="/images/git-interactions.png" alt="Git Interactions" />
+                </figure>
+                <div class="info">
+                    <h3>GitInteractions</h3>
+                    <p>
+                        GitInteractions is an analytical tool designed to scrutinize git repositories, extract relevant data, and generate insightful metrics aimed at enhancing a development team's performance and product quality. By producing comprehensive reports, it effectively visualizes the strengths and weaknesses of a team contributing to a Git repository. This allows for the identification of standout performers deserving of recognition, as well as individuals who might benefit from additional coaching to optimize their performance.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </a>
+
 </div>
 @endsection

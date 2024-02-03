@@ -64,6 +64,17 @@ Prism.highlightAll();
 
 /***/ }),
 
+/***/ "./resources/sass/projects.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/projects.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/welcome.scss":
 /*!*************************************!*\
   !*** ./resources/sass/welcome.scss ***!
@@ -76,9 +87,9 @@ Prism.highlightAll();
 /***/ }),
 
 /***/ 0:
-/*!*****************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/welcome.scss ./resources/sass/about.scss ./resources/sass/article.scss ***!
-  \*****************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/welcome.scss ./resources/sass/about.scss ./resources/sass/article.scss ./resources/sass/projects.scss ***!
+  \************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -86,7 +97,8 @@ __webpack_require__(/*! /home/xavi/Workspace/xaviortega.dev/resources/js/app.js 
 __webpack_require__(/*! /home/xavi/Workspace/xaviortega.dev/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /home/xavi/Workspace/xaviortega.dev/resources/sass/welcome.scss */"./resources/sass/welcome.scss");
 __webpack_require__(/*! /home/xavi/Workspace/xaviortega.dev/resources/sass/about.scss */"./resources/sass/about.scss");
-module.exports = __webpack_require__(/*! /home/xavi/Workspace/xaviortega.dev/resources/sass/article.scss */"./resources/sass/article.scss");
+__webpack_require__(/*! /home/xavi/Workspace/xaviortega.dev/resources/sass/article.scss */"./resources/sass/article.scss");
+module.exports = __webpack_require__(/*! /home/xavi/Workspace/xaviortega.dev/resources/sass/projects.scss */"./resources/sass/projects.scss");
 
 
 /***/ })

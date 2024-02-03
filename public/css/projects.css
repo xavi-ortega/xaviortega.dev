@@ -1,0 +1,51 @@
+* {
+  font-family: "Nunito";
+  color: #34495e;
+}
+
+section {
+  padding-block: 20px;
+}
+
+section a > *,
+section a:hover > *,
+section a:active > *,
+section a:focus > * {
+  text-decoration: none !important;
+}
+
+section article {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s ease-in;
+}
+
+section article:hover {
+  background-color: #86cfda;
+}
+
+section article figure {
+  flex-grow: 0;
+}
+
+section article figure img {
+  max-width: 15vw;
+}
+
+section article .info {
+  flex-grow: 1;
+}
+
+section article h3 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+section article p {
+  font-size: 1.25em;
+}
+

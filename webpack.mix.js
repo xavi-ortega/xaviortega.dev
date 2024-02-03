@@ -20,4 +20,5 @@ mix.sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/welcome.scss', 'public/css')
     .sass('resources/sass/about.scss', 'public/css')
     .sass('resources/sass/article.scss', 'public/css')
+    .sass('resources/sass/projects.scss', 'public/css')
     .version();
