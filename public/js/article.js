@@ -33,7 +33,6 @@ thumbsUpElement.addEventListener('click', function () {
     dislikes--;
     thumbsDownElement.nextSibling.textContent = " ".concat(dislikes);
   }
-
   if (!thumbsUp) {
     thumbsUp = true;
     thumbsUpElement.classList.add('text-primary');
@@ -50,7 +49,6 @@ thumbsDownElement.addEventListener('click', function () {
     likes--;
     thumbsUpElement.nextSibling.textContent = " ".concat(likes);
   }
-
   if (!thumbsDown) {
     thumbsDown = true;
     thumbsDownElement.classList.add('text-danger');
@@ -63,25 +61,21 @@ var errorFeedback = document.getElementById('error-feedback');
 commentForm.onSubmit(function (data) {
   if (commentForm.isValid()) {
     hideErrors();
-
     if (thumbsUp) {
       data.pleased = true;
     } else if (thumbsDown) {
       data.pleased = false;
     }
-
     axios.post("article/".concat(article_id, "/comment"), data).then(function (response) {
       if (response.data.success) {
         var commentEl = document.createElement('div');
         commentEl.classList.add('comment', 'mb-3');
         var innerHTML = "<div class=\"comment-header mb-3\">\n                    <div class=\"comment-metadata\">\n                        <span>".concat(data.author || 'Annonymous', "</span> &nbsp;\u2022&nbsp; Now\n                    </div>");
-
         if (data.pleased) {
           innerHTML += "<i class=\"fas fa-thumbs-up text-primary\" title=\"".concat(data.author || 'Annonyous', " loved the article\" id=\"thumbs-up\"></i>");
         } else {
           innerHTML += "<i class=\"fas fa-thumbs-down text-danger\" title=\"".concat(data.author || 'Annonyous', " wasn't pleased by article\" id=\"thumbs-down\"></i>");
         }
-
         innerHTML += "</div>\n                <div class=\"comment-body\">\n                    ".concat(data.body, "\n                </div>");
         commentEl.innerHTML = innerHTML;
         commentForm.form.after(commentEl);
@@ -93,25 +87,20 @@ commentForm.onSubmit(function (data) {
     showErrors(commentForm.getErrors());
   }
 });
-
 function hideErrors() {
   errorFeedback.innerHTML = '';
   errorFeedback.style.display = 'none';
 }
-
 function showErrors(errors) {
   errorFeedback.innerHTML = '';
   errorFeedback.style.display = 'block';
-
   if (errors.includes('body')) {
     errorFeedback.innerHTML += "<p>Please, leave an opinion before submitting</p>";
   }
-
   if (errors.includes('userMustVote')) {
     errorFeedback.innerHTML += "<p>Please, react to the article (<i class=\"fas fa-thumbs-up\"></i> or <i class=\"fas fa-thumbs-down\"></i>) before leaving an opinion</p>";
   }
 }
-
 function resetFeedback() {
   thumbsUp = false;
   thumbsDown = false;
@@ -131,21 +120,19 @@ function resetFeedback() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return Form; });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 var Form = /*#__PURE__*/function () {
   function Form(form) {
     _classCallCheck(this, Form);
-
     this.form = document.getElementById(form);
     this.fields = {};
     this.rules = {};
   }
-
   _createClass(Form, [{
     key: "addField",
     value: function addField(fieldName) {
@@ -161,7 +148,6 @@ var Form = /*#__PURE__*/function () {
     key: "isValid",
     value: function isValid() {
       var _this = this;
-
       this.fetchValues();
       return Object.keys(this.rules).every(function (fieldName) {
         if (_this.fields[fieldName]) {
@@ -175,7 +161,6 @@ var Form = /*#__PURE__*/function () {
     key: "getErrors",
     value: function getErrors() {
       var _this2 = this;
-
       return Object.keys(this.rules).map(function (fieldName) {
         if (_this2.fields[fieldName]) {
           if (!_this2.rules[fieldName](_this2.fields[fieldName])) {
@@ -183,7 +168,6 @@ var Form = /*#__PURE__*/function () {
           }
         } else {
           console.log(fieldName);
-
           if (!_this2.rules[fieldName]()) {
             return fieldName;
           }
@@ -194,13 +178,10 @@ var Form = /*#__PURE__*/function () {
     key: "onSubmit",
     value: function onSubmit(callback) {
       var _this3 = this;
-
       document.removeEventListener('submit', this.form);
       this.form.addEventListener('submit', function (e) {
         e.preventDefault();
-
         _this3.fetchValues();
-
         callback(_this3.fields);
       });
     }
@@ -220,7 +201,6 @@ var Form = /*#__PURE__*/function () {
       });
     }
   }]);
-
   return Form;
 }();
 

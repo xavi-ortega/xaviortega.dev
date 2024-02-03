@@ -187,7 +187,7 @@ footer .navbar {
 }
 
 .navbar {
-  box-shadow: 2px 0 5px #0000001f;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1215686275);
   padding: 1rem;
   background-color: white;
 }
@@ -268,12 +268,11 @@ footer .navbar {
 }
 
 .newsletter {
-  box-shadow: 2px 0 5px #0000001f;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1215686275);
   background: white;
 }
 
 .newsletter .alert {
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
