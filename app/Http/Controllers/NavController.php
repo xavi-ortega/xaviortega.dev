@@ -26,4 +26,9 @@ class NavController extends Controller
     {
         return view('about');
     }
+
+    public function projects()
+    {
+        return view('projects');
+    }
 }

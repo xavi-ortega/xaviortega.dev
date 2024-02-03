@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'NavController@index');
 Route::get('/about', 'NavController@about');
+Route::get('/projects', 'NavController@projects');
 Route::get('/article/{series}/{slug}', 'ArticlesController@show');
 Route::post('/subscribe', 'NewsletterController@subscribe');
 
