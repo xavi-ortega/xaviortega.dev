@@ -107,7 +107,7 @@
                 </ul>
 
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item text-center">&copy; Xavi Ortega, 2021</li>
+                    <li class="nav-item text-center">&copy; Xavi Ortega, {{ now()->year }}</li>
                 </ul>
             </div>
 
