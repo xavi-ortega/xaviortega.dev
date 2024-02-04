@@ -22,11 +22,9 @@
     <link rel="preload" href="/css/utilities.min.css" as="style">
     <link rel="preload" href="/css/fontawesome.min.css" as="style">
     <link rel="preload" href="/css/solid.min.css" as="style">
-    <link rel="preload" href="/css/bootstrap.min.css" as="style">
 
 
     <!-- Styles -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     @yield('page-styles')
@@ -47,7 +45,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light flex">
         <div class="container clearfix">
             <a href="/" class="navbar-brand float-left ml-0 d-none d-md-flex align-items-center">
                 <span class="mr-2">{</span>

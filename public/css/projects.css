@@ -7,42 +7,69 @@ section {
   padding-block: 20px;
 }
 
-section a > *,
-section a:hover > *,
-section a:active > *,
-section a:focus > * {
-  text-decoration: none !important;
-}
-
 section article {
-  padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
   display: flex;
-  cursor: pointer;
   background-color: white;
-  transition: background-color 0.3s ease-in;
 }
 
-section article:hover {
-  background-color: #86cfda;
+section article .project-brand {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px dashed darkgray;
 }
 
-section article figure {
+section article .project-brand figure {
   flex-grow: 0;
 }
 
-section article figure img {
+section article .project-brand figure img {
   max-width: 15vw;
+}
+
+section article .project-brand .stack {
+  margin-inline: auto;
+  display: flex;
+}
+
+section article .project-brand .stack img {
+  aspect-ratio: 1;
+  width: 3vw;
 }
 
 section article .info {
   flex-grow: 1;
+  padding: 10px;
+}
+
+section article .challenges {
+  flex-grow: 1;
+  border-left: 1px dashed darkgray;
+}
+
+section article .challenges .title {
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 1px dashed darkgray;
+  display: grid;
+  place-content: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+section article .challenges .body {
+  padding: 10px;
+  text-wrap: nowrap;
+  line-height: 2em;
 }
 
 section article h3 {
+  text-align: center;
   font-size: 2.5em;
   margin-bottom: 10px;
+  text-justify: pretty;
 }
 
 section article p {

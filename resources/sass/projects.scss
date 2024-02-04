@@ -6,43 +6,69 @@
 section {
     padding-block: 20px;
 
-    a, a:hover, a:active, a:focus {
-        & > * {
-            text-decoration: none!important;
-        }
-    }
-
     article {
-        padding: 10px;
         border: 1px solid black;
         border-radius: 5px;
         display: flex;
-
-        cursor: pointer;
-
         background-color: white;
-        transition: background-color 0.3s ease-in;
 
-        &:hover {
-            background-color: #86cfda;
-        }
+        .project-brand {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px dashed darkgray;
 
+            figure {
+                flex-grow: 0;
 
-        figure {
-            flex-grow: 0;
+                img {
+                    max-width: 15vw;
+                }
+            }
 
-            img {
-                max-width: 15vw;
+            .stack {
+                margin-inline: auto;
+                display: flex;
+
+                img {
+                    aspect-ratio: 1;
+                    width: 3vw;
+                }
             }
         }
 
+
         .info {
             flex-grow: 1;
+            padding: 10px;
+        }
+
+        .challenges {
+            flex-grow: 1;
+            border-left: 1px dashed darkgray;
+
+            .title {
+                padding: 10px;
+                border-radius: 5px;
+                border-bottom: 1px dashed darkgray;
+                display: grid;
+                place-content: center;
+                font-weight: bold;
+                font-size: 1.5em;
+            }
+
+            .body {
+                padding: 10px;
+                text-wrap: nowrap;
+                line-height: 2em;
+            }
         }
 
         h3 {
+            text-align: center;
             font-size: 2.5em;
             margin-bottom: 10px;
+            text-justify: pretty;
         }
 
         p {
