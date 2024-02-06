@@ -1,17 +1,13 @@
-* {
-    font-family: "Nunito";
-    color: #34495e;
-}
 
-body {
-    text-rendering: optimizeLegibility;
-}
-
-article {
+section {
     max-width: 680px;
     margin-left: auto;
     margin-right: auto;
     padding: 4rem 0;
+
+    article {
+        text-rendering: optimizeLegibility;
+    }
 }
 
 h1 {
@@ -127,7 +123,6 @@ footer {
         box-shadow: 0 0 0 1px #e4e4e4;
         border: 0;
         transition: box-shadow 0.5s ease;
-        font-family: "Nunito";
         font-size: 18px;
 
         &:focus {
@@ -143,7 +138,6 @@ footer {
         box-shadow: 0 0 0 1px #e4e4e4;
         border: 0;
         transition: box-shadow 0.5s ease;
-        font-family: "Nunito";
         font-size: 18px;
 
         &:focus {
