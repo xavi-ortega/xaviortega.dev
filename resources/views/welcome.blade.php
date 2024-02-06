@@ -33,7 +33,7 @@
         <a href="/article/{{ $article->slug }}">
             <div class="index">
                 <span>{{ $index + 1 }}</span>
-                <small><i class="fas fa-clock"></i> {{ $article->read_time }}min read</small>
+                <small><img src="images/clock.svg"  alt="clock"/> {{ $article->read_time }}min read</small>
             </div>
             <div class="info">
                 <h2>{{ $article->shortTitle }}</h2>
@@ -46,7 +46,7 @@
         <div class="coming-soon">
             <div class="index">
                 <span>{{ ($index ?? 0) + 2 }}</span>
-                <small><i class="fas fa-clock"></i> Coming soon</small>
+                <small><img src="images/clock.svg"  alt="clock"/> Coming soon</small>
             </div>
             <div class="info">
                 <h2>Handle HTTP Errors</h2>

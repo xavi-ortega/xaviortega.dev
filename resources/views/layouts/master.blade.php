@@ -15,12 +15,9 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700;900&display=swap" rel="stylesheet" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin>
-
 
     <!-- RENDER-BLOCKING ASSETS -->
     <link rel="preload" href="/css/utilities.min.css" as="style">
-    <link rel="preload" href="/css/fontawesome.min.css" as="style">
     <link rel="preload" href="/css/solid.min.css" as="style">
 
 
@@ -76,27 +73,6 @@
     </div>
 
     <footer>
-{{--        <div class="newsletter py-5" id="newsletter">--}}
-{{--            <div class="container d-flex flex-column justify-content-center">--}}
-{{--                <h3 class="text-center mb-4">Stay tuned for upcoming articles</h3>--}}
-{{--                <form class="form-inline my-2 my-lg-0 mx-auto" method="POST" action="{{ url('/subscribe') }}">--}}
-{{--                    @csrf--}}
-{{--                    <input class="form-control mr-sm-2" type="email" placeholder="Email" aria-label="Subscribe" name="email" value="{{ old('email') }}">--}}
-{{--                    <button class="btn btn btn-outline-secondary my-2 my-sm-0 ml-auto" type="submit">Subscribe</button>--}}
-{{--                </form>--}}
-
-{{--                @error('email')--}}
-{{--                <div class="alert alert-danger mt-3 mx-auto">{{ $message }}</div>--}}
-{{--                @enderror--}}
-
-{{--                @if (session('status'))--}}
-{{--                <div class="alert alert-success mt-3 mx-auto">--}}
-{{--                    {{ session('status') }}--}}
-{{--                </div>--}}
-{{--                @endif--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
         <nav class="navbar navbar-expand-lg navbar-light flex">
             <div class="container">
                 <ul class="navbar-nav mx-auto">
@@ -113,7 +89,6 @@
     </footer>
 
     <link href="/css/utilities.min.css" rel="stylesheet" />
-    <link href="/css/fontawesome.min.css" rel="stylesheet" />
     <link href="/css/solid.min.css" rel="stylesheet" />
 
     <script src="/js/prism.js" defer></script>

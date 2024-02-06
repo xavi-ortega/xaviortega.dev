@@ -1,8 +1,3 @@
-* {
-  font-family: "Nunito";
-  color: #34495e;
-}
-
 section {
   padding: 2rem 0;
 }
@@ -14,7 +9,6 @@ section {
 }
 
 .banner.programming {
-  background: url(/images/programming.png);
   background: url(/images/programming.webp), linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%);
   background-repeat: no-repeat;
   background-position: left;
@@ -104,10 +98,15 @@ section {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   min-width: 120px;
+  display: flex;
+  align-items: center;
 }
 
-.articles a .index small i,
-.articles .coming-soon .index small i {
+.articles a .index small img,
+.articles .coming-soon .index small img {
+  aspect-ratio: 1;
+  width: 16px;
+  margin-right: 2px;
   color: white;
 }
 
@@ -126,6 +125,7 @@ section {
 .articles a .info p,
 .articles .coming-soon .info p {
   font-size: 13px;
+  text-wrap: balance;
 }
 
 h1 {
