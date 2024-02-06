@@ -1,80 +1,124 @@
-* {
-    font-family: "Nunito";
-    color: #34495e;
+section {
+    padding-block: 2rem 0;
 }
 
-section {
-    padding-block: 20px;
+.banner {
+    position: relative;
+    padding: 2rem 1rem;
 
-    article {
-        border: 1px solid black;
-        border-radius: 5px;
-        display: flex;
-        background-color: white;
+    border-radius: 10px;
 
-        .project-brand {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            border-right: 1px dashed darkgray;
+    margin-bottom: 3rem;
 
-            figure {
-                flex-grow: 0;
+    &.programming {
+        background: url(/images/programming.webp),
+        linear-gradient(
+                to right,
+                rgb(91, 121, 162) 0%,
+                rgb(46, 68, 105) 100%
+        );
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: cover;
+    }
 
-                img {
-                    max-width: 15vw;
-                }
-            }
-
-            .stack {
-                margin-inline: auto;
-                display: flex;
-
-                img {
-                    aspect-ratio: 1;
-                    width: 3vw;
-                }
-            }
-        }
-
-
-        .info {
-            flex-grow: 1;
-            padding: 10px;
-        }
-
-        .challenges {
-            flex-grow: 1;
-            border-left: 1px dashed darkgray;
-
-            .title {
-                padding: 10px;
-                border-radius: 5px;
-                border-bottom: 1px dashed darkgray;
-                display: grid;
-                place-content: center;
-                font-weight: bold;
-                font-size: 1.5em;
-            }
-
-            .body {
-                padding: 10px;
-                text-wrap: nowrap;
-                line-height: 2em;
-            }
-        }
-
-        h3 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-justify: pretty;
-        }
-
-        p {
-            font-size: 1.25em;
-        }
+    h1 {
+        color: white;
+        font-size: 38px;
+        text-shadow: 1px 1px #000000;
+        margin: 0;
+        text-align: center;
     }
 }
 
+article {
+    margin-block: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
 
+    min-height: 360px;
+
+    .project-brand {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px dashed darkgray;
+
+        figure {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+
+            img {
+                max-width: 15vw;
+            }
+        }
+
+        .stack {
+            margin-inline: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                aspect-ratio: 1;
+                width: 3vw;
+
+                &.stack-png {
+                    width: 2.2vw;
+                    height: 2.2vw;
+                    box-shadow: 0px 0px 8px #e3e3e3;
+                    border-radius: 6px;
+                    margin-left: 6px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+
+    .info {
+        flex-grow: 1;
+        padding: 10px;
+    }
+
+    .challenges {
+        flex-grow: 1;
+        border-left: 1px dashed darkgray;
+        min-width: 350px;
+
+        .title {
+            padding: 10px;
+            border-radius: 5px;
+            border-bottom: 1px dashed darkgray;
+            display: grid;
+            place-content: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .body {
+            padding: 10px;
+            text-wrap: nowrap;
+            line-height: 2em;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+
+
+        small {
+            color: #3d4852;
+        }
+    }
+
+    p {
+        font-size: 1.25em;
+        text-justify: pretty;
+    }
+}

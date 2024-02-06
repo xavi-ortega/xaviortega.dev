@@ -1,55 +1,88 @@
-* {
-  font-family: "Nunito";
-  color: #34495e;
-}
-
 section {
-  padding-block: 20px;
+  padding-block: 2rem 0;
 }
 
-section article {
+.banner {
+  position: relative;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.banner.programming {
+  background: url(/images/programming.webp), linear-gradient(to right, rgb(91, 121, 162) 0%, rgb(46, 68, 105) 100%);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 38px;
+  text-shadow: 1px 1px #000000;
+  margin: 0;
+  text-align: center;
+}
+
+article {
+  margin-block: 20px;
   border: 1px solid black;
   border-radius: 5px;
   display: flex;
   background-color: white;
+  min-height: 360px;
 }
 
-section article .project-brand {
+article .project-brand {
   padding: 10px;
   display: flex;
   flex-direction: column;
   border-right: 1px dashed darkgray;
 }
 
-section article .project-brand figure {
-  flex-grow: 0;
+article .project-brand figure {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
-section article .project-brand figure img {
+article .project-brand figure img {
   max-width: 15vw;
 }
 
-section article .project-brand .stack {
+article .project-brand .stack {
   margin-inline: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-section article .project-brand .stack img {
+article .project-brand .stack img {
   aspect-ratio: 1;
   width: 3vw;
 }
 
-section article .info {
+article .project-brand .stack img.stack-png {
+  width: 2.2vw;
+  height: 2.2vw;
+  box-shadow: 0px 0px 8px #e3e3e3;
+  border-radius: 6px;
+  margin-left: 6px;
+  padding: 5px;
+}
+
+article .info {
   flex-grow: 1;
   padding: 10px;
 }
 
-section article .challenges {
+article .challenges {
   flex-grow: 1;
   border-left: 1px dashed darkgray;
+  min-width: 350px;
 }
 
-section article .challenges .title {
+article .challenges .title {
   padding: 10px;
   border-radius: 5px;
   border-bottom: 1px dashed darkgray;
@@ -59,20 +92,24 @@ section article .challenges .title {
   font-size: 1.5em;
 }
 
-section article .challenges .body {
+article .challenges .body {
   padding: 10px;
   text-wrap: nowrap;
   line-height: 2em;
 }
 
-section article h3 {
+article h3 {
   text-align: center;
   font-size: 2.5em;
   margin-bottom: 10px;
-  text-justify: pretty;
 }
 
-section article p {
+article h3 small {
+  color: #3d4852;
+}
+
+article p {
   font-size: 1.25em;
+  text-justify: pretty;
 }
 

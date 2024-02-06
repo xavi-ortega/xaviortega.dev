@@ -88,6 +88,11 @@ ul {
   margin-bottom: 1rem;
 }
 
+* {
+  font-family: system-ui;
+  color: #34495e;
+}
+
 a {
   color: #007bff;
   text-decoration: none;
